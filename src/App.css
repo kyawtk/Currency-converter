@@ -7,21 +7,26 @@
 .container {
   width: 100vw;
   min-height: 100vh;
-  
+
 }
 
 .amount-input {
   outline: none;
-  border: 2px solid #333;
+  border: 2px solid rgb(35, 30, 131);
   border-radius: 5px;
   padding: 0.25rem;
   width: 200px;
   font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(37, 35, 35);
 }
 .currency-select {
   padding: 0.25rem;
   outline: none;
   font-size: 1.5rem;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  font-style: italic;
 }
 
 .equal-sign {
