@@ -2,34 +2,101 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color:#444444;
 }
 
 .container {
   width: 100vw;
   min-height: 100vh;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ background-color: rgb(240, 236, 236);
 }
 
+.wrapper{
+  position: relative;
+  border-radius: 10px;
+  background: #F8F8F8; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.2)  ; 
+	-webkit-box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.2)  ; 
+	-moz-box-shadow: 5px 5px 47px rgba(0, 0, 0, 0.2)  ; 
+  overflow: hidden;
+}
+.header{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.display-amount {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .amount-input {
-  outline: none;
-  border: 2px solid rgb(35, 30, 131);
-  border-radius: 5px;
+  background-color: inherit;
+ outline:none;
+  border: 3px solid #444444;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: 'Arvo', serif;
   padding: 0.25rem;
   width: 200px;
   font-size: 1.5rem;
   font-weight: 600;
-  color: rgb(37, 35, 35);
+  
 }
 .currency-select {
   padding: 0.25rem;
+  border: none;
   outline: none;
-  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.08);
+  font-size: 2rem;
+  font-weight: 300;
   box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
-  border-radius: 8px;
-  font-style: italic;
+  margin: 3px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.equal-sign {
-  font-size: 3rem;
-  font-weight: 500;
+
+select::-webkit-scrollbar {
+  width: 3px;
+  background-color:#333333;
+ }
+ select::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.seperator{
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.08);
+border-radius: 50%;
+  top: 40%;
+  left: 40%;
+  animation: rotate infinite 5s linear;
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 410px){
+  .wrapper{
+    width: 100vw;
+    height: 100vh;
+  }
 }
